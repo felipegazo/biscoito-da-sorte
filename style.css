@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color--orange: #FF9500;
+    --color--gray: #E4EDF1;
+    --color--blue: #34355B;
+    --color--background: linear-gradient(to top right, #190361, #BB00FF);
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-image: var(--color--background);
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+main {
+    max-width: 26.75rem;
+    min-height: 26.5rem;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    border-radius: 0.312rem;
+    padding: 3rem 4rem;
+    box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--color--blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 0.8rem;
+    font-family: "DM Sans", sans-serif;
+    color: var(--color--blue);
+    font-size: 0.93rem;
+}
+
+img {
+    margin-top: 1.25rem;
+}
+
+.screen1 img:hover{
+    cursor: pointer;
+    animation-name: shake;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.screen2 h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color--blue);
+}
+
+.screen2 p {
+    font-family: "Dancing Script", cursive;
+    margin-top: 1.06rem;
+    background: var(--color--gray);
+    padding: 0.625rem;
+    box-shadow: 0.125rem 0.125rem rgba(85, 85, 85, 0.5);
+    font-size: 1.5rem;
+    color: #000;
+    animation-name: zoom;
+    animation-duration: 1s;
+}
+
+button {
+    font-family: "DM Sans", sans-serif;
+    color: #fff;
+    background: var(--color--orange);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #fca121;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.5);}
+    to {transform: scale(1);}
+}
+
+@keyframes shake {
+    0%, 100% {transform: rotate(-1deg);}
+    50% {transform: rotate(1deg);}
+}
